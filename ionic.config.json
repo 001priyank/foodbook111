@@ -1,0 +1,8 @@
+{
+  "name": "foodbook",
+  "app_id": "7118f951",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
