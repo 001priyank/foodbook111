@@ -7,6 +7,26 @@
 </ion-header>
 
 <ion-content padding>
- <button ion-button (click)="takePhoto()"> Take Photo </button>
- 
+    <ion-list>
+
+        <ion-item>
+          <ion-label fixed>Cuisine Type</ion-label>
+          <ion-input [(ngModel)]="cuisineType" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Restaurant Name</ion-label>
+            <ion-input [(ngModel)]="restaurant" type="text"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+              <ion-label fixed>Description</ion-label>
+              <ion-textarea [(ngModel)]="description" type="text" value=""></ion-textarea>
+            </ion-item>
+            <ion-item>
+                <ion-label fixed>User Name</ion-label>
+                <ion-input [(ngModel)]="username" type="text"></ion-input>
+              </ion-item>
+      </ion-list>
+ <button ion-button (click)="takePhoto()"> Take Photo </button> 
+{{messageLog}}
 </ion-content>
