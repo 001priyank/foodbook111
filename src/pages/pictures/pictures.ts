@@ -27,6 +27,13 @@ export class PicturesPage {
     initializeApp(FIREBASE_CONFIG);
   }
 
+  openModal(picture) {
+
+    var data = { message : picture };
+    var modalPage = this.modalCtrl.create('ModalPage',data);
+    modalPage.present();
+  }
+  
   sanitize(url?:string){
     return this.sanitizer.bypassSecurityTrustUrl(url);
 }

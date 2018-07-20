@@ -1,0 +1,51 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>FoodBook</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    
+ 
+  <ion-card>
+      <ion-card-content>
+          <img *ngIf="picture?.pictureLinkId" [src]="picture?.pictureLinkId" class="center">
+        </ion-card-content>
+      <ion-card-content>
+          {{picture?.cuisineType}}
+        </ion-card-content>
+        <ion-card-content>
+            <ion-icon (click)="openWebsite()" name="restaurant"></ion-icon> <ion-row style="width: 1px"></ion-row> {{picture?.restaurant}} 
+        </ion-card-content>
+    
+        <ion-card-content>
+          {{picture?.description}}
+        </ion-card-content>
+        <ion-card-content>
+            <ion-icon  ></ion-icon> <ion-row style="width: 1px"></ion-row> Share
+        </ion-card-content>
+  
+  </ion-card>
+  <ion-fab right bottom>
+      <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button (click)="shareFacebook()" ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+  
+ 
+</ion-content>

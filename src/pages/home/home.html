@@ -22,11 +22,13 @@
               <ion-label fixed>Description</ion-label>
               <ion-textarea [(ngModel)]="description" type="text" value=""></ion-textarea>
             </ion-item>
-            <ion-item>
-                <ion-label fixed>User Name</ion-label>
-                <ion-input [(ngModel)]="username" type="text"></ion-input>
-              </ion-item>
+         
       </ion-list>
  <button ion-button (click)="takePhoto()"> Take Photo </button> 
-{{messageLog}}
+ <button ion-button (click)="getPicture(0)">Show Album</button>  
+
+<ion-card>
+    <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
+    <button ion-button (click)="upload()" *ngIf="captureDataUrl">Upload</button>
+  </ion-card>
 </ion-content>

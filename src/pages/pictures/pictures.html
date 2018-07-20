@@ -32,11 +32,11 @@
 
       <ion-item *ngFor="let picture of picturesValues">
           <ion-thumbnail item-start>
-            <img  *ngIf="picture?.pictureLinkId" [src] = "(picture?.pictureLinkId)">
+            <img (click)="openModal(picture)" *ngIf="picture?.pictureLinkId" [src] = "(picture?.pictureLinkId)">
           </ion-thumbnail>
           <h2>{{picture.cuisineType}}</h2>
           <h3>{{picture.restaurant}} </h3>
-          <p>{{picture.description}}</p>
+         
         
         </ion-item>
    

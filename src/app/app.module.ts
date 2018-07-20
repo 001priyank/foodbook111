@@ -8,7 +8,8 @@ import { Camera } from '@ionic-native/camera'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PicturesPage } from '../pages/pictures/pictures';
-
+import {InAppBrowser} from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
 @NgModule({
   declarations: [
     MyApp,
@@ -29,6 +30,8 @@ import { PicturesPage } from '../pages/pictures/pictures';
     StatusBar,
     SplashScreen,
     Camera,
+    InAppBrowser,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
